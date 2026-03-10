@@ -32,6 +32,12 @@ def login(username, password):
 def products():
     return api_call({"action": "products"})
 
+def stock_gudang():
+    return api_call({"action": "stock_gudang"})
+
+def stock_harian():
+    return apicall({"action": "stock_harian"})
+
 def jual_produk(username, product_id, qty):
     return api_call({
         "action": "jual",
