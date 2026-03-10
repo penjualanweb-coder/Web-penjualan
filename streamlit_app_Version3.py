@@ -32,12 +32,6 @@ def login(username, password):
 def products():
     return api_call({"action": "products"})
 
-def stock_gudang():
-    return api_call({"action": "stock_gudang"})
-
-def stock_harian():
-    return api_call({"action": "stock_harian"})
-
 def jual_produk(username, product_id, qty):
     return api_call({
         "action": "jual",
@@ -369,10 +363,8 @@ else:
         st.subheader("📦 Daftar Produk")
 
         products_data = products()
-        stock_gudang_data_list = stock_gudang()
-        stock_harian_data_list = stock_harian()
 
-        if isinstance(products_data, stock_gudang_data_list, stock_harian_data_list, list):
+        if isinstance(products_data, list):
             
 
             table = []
@@ -385,8 +377,6 @@ else:
                     "Nama": p["name"],
                     "Modal": p["cost"],
                     "Harga Jual": p["price"],
-                    "Stock Gudang": p["gudang_stok"],
-                    "Stock Harian": p["harian_stock"]
                 })
 
             st.dataframe(table, use_container_width=True)
