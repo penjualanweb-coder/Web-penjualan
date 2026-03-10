@@ -369,10 +369,10 @@ else:
         st.subheader("📦 Daftar Produk")
 
         products_data = products()
-        stock_gudang_data = stock_gudang()
-        stock_harian_data = stock_harian()
+        stock_gudang_data_list = stock_gudang()
+        stock_harian_data_list = stock_harian()
 
-        if isinstance(products_data, stock_gudang_data, stock_harian_data, list):
+        if isinstance(products_data, stock_gudang_data_list, stock_harian_data_list, list):
             
 
             table = []
