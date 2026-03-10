@@ -364,7 +364,7 @@ else:
 
         products_data = products()
 
-        if isinstance(products_data, stock_gudang_data, stock_harian_data, list):
+        if isinstance(products_data, stock_gudang, stock_harian, list):
             
 
             table = []
