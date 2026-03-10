@@ -364,7 +364,7 @@ else:
 
         products_data = products()
 
-        if isinstance(products_data, list):
+        if isinstance(products_data, stock_gudang_data, stock_harian_data, list):
             
 
             table = []
@@ -376,7 +376,9 @@ else:
                     "ID": p["id"],
                     "Nama": p["name"],
                     "Modal": p["cost"],
-                    "Harga Jual": p["price"]
+                    "Harga Jual": p["price"],
+                    "Stock Gudang": p["gudang_stok"],
+                    "Stock Harian": p["harian_stock"]
                 })
 
             st.dataframe(table, use_container_width=True)
